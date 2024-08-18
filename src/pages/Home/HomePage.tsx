@@ -2,22 +2,24 @@ import { useQuery } from "@tanstack/react-query";
 
 import HomeContainer from "./components/HomeContainer";
 import { getUsers } from "../../api/services/getUsers";
+import Loading from "../../components/Loading";
+import { UserType } from "../../types/userType";
 
 const HomePage = () => {
   const { data, isPending } = useQuery({
     queryKey: ["usersData"],
 
     queryFn: async () => {
-      const response = (await getUsers()) as UserType;
+      const response = (await getUsers()) as UserType[];
       return response;
     },
   });
 
-  if (isPending) return <></>;
+  if (isPending) return <Loading />;
 
   return (
     <div className="font-RobotoCondensed">
-      {data && <HomeContainer userData={data} />}
+      {data && <HomeContainer userData={data} isLoading={isPending} />}
     </div>
   );
 };

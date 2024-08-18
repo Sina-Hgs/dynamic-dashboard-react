@@ -1,33 +1,39 @@
+import { useState } from "react";
+import TableHead from "./TableHead";
 import TableRow from "./TableRow";
+import Pagination from "./Pagination";
+import { UserType } from "../../types/userType";
 
-const Table = () => {
+interface TableProps {
+  userData: UserType[];
+}
+
+const Table = ({ userData }: TableProps) => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const itemsPerPage = 5;
+
+  // current page table items
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = userData.slice(startIndex, startIndex + itemsPerPage);
+
   return (
-    <div className="relative overflow-x-auto min-w-[95%]  transition-all">
-      <table className="w-full text-sm text-left">
-        <thead className="text-xs  h-6">
-          <tr>
-            <th scope="col" className="px-6">
-              Name
-            </th>
-            <th scope="col" className="px-6">
-              <div className="flex items-center">Email</div>
-            </th>
-            <th scope="col" className="px-6">
-              <div className="flex items-center">Location</div>
-            </th>
-
-            <th scope="col" className="px-6">
-              <span className="sr-only">Edit</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody className="bg-darkBlack bg-opacity-80 font-RobotoMono">
-          <TableRow />
-          <TableRow />
-          <TableRow />
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div className="overflow-x-auto min-w-[95%] max-[1000px]:w-full transition-all">
+        <table className="w-full text-sm text-left">
+          <TableHead />
+          <tbody className="bg-darkBlack bg-opacity-80 font-RobotoMono">
+            {currentItems.map((user, index) => (
+              <TableRow key={index} userData={user} />
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <Pagination
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        totalPages={Math.ceil(userData.length / itemsPerPage)}
+      />
+    </>
   );
 };
 
