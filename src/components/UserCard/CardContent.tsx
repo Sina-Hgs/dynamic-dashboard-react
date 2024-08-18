@@ -19,8 +19,8 @@ const CardContent = ({
   company,
 }: CardContentProps) => {
   return (
-    <div className="py-6">
-      <div className="flex flex-col justify-start items-start gap-2">
+    <div className="pt-6 pb-3">
+      <div className="flex flex-col justify-start items-start gap-2 ">
         <UserInfo email={email} phone={phone} website={website} />
         <AddressInfo address={address} />
         <CompanyInfo company={company} />

@@ -2,13 +2,13 @@ const TableHead = () => {
   return (
     <thead className="text-xs h-6">
       <tr>
-        <th scope="col" className="px-6">
+        <th scope="col" className="px-6 max-[1000px]:px-1 ">
           Name
         </th>
-        <th scope="col" className="px-6">
+        <th scope="col" className="px-6 max-[1000px]:px-1">
           <div className="flex items-center">Email</div>
         </th>
-        <th scope="col" className="px-6">
+        <th scope="col" className="px-6 max-[1000px]:px-1">
           <div className="flex items-center">Location</div>
         </th>
 

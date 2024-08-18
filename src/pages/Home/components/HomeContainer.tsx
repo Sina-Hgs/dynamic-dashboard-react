@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Search from "../../../components/Search";
 import Table from "../../../components/Table";
+import { UserType } from "../../../types/userType";
 
 interface HomeContainerProps {
   userData: UserType[];
@@ -22,7 +23,7 @@ const HomeContainer = ({ userData, isLoading }: HomeContainerProps) => {
   }, [inputValue, userData]);
 
   return (
-    <section className="bg-darkSecondary border border-borderPrimary shadow-lg rounded-lg w-[85%] px-12 py-8 m-auto relative top-6 bg-gradient-to-b from-darkSecondary from-0% to-darkBlack to-100% flex flex-col justify-center items-center">
+    <section className="bg-darkSecondary border border-borderPrimary shadow-lg rounded-lg w-[85%] px-12 max-[1000px]:px-2 max-[1000px]:w-[95%] py-8 m-auto relative top-6 bg-gradient-to-b from-darkSecondary from-0% to-darkBlack to-100% flex flex-col justify-center items-center">
       <Search
         inputValue={inputValue}
         setInputValue={setInputValue}

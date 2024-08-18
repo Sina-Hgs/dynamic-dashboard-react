@@ -7,7 +7,7 @@ interface CompanyInfoProps {
 
 const CompanyInfo = ({ company }: CompanyInfoProps) => {
   return (
-    <span className="flex flex-col gap-1 px-3 pt-4">
+    <span className="flex flex-col gap-1 px-3 pt-4 max-[1000px]:text-xs">
       <div className="flex gap-2 items-center">
         <img src={CompanySign} alt="Company-sign" width={20} height={20} />
         <span className="text-md">Company:</span>

@@ -13,12 +13,19 @@ const TableRow = ({ userData }: TableRowProps) => {
   return (
     <>
       <tr className="hover:bg-lightPrimary hover:bg-opacity-90 transition-all hover:text-darkPrimary">
-        <th scope="row" className="px-6 py-4 ">
+        <th
+          scope="row"
+          className="px-6 py-4 max-[1000px]:px-2 max-[1000px]:text-xs "
+        >
           {userData.name}
         </th>
-        <td className="px-6 py-4">{userData.email}</td>
-        <td className="px-6 py-4">{userData.address.city}</td>
-        <td className="px-6 py-4 ">
+        <td className="px-6 py-4 max-[1000px]:px-2 max-[1000px]:text-xs">
+          {userData.email}
+        </td>
+        <td className="px-6 py-4 max-[1000px]:px-2 max-[1000px]:text-xs">
+          {userData.address.city}
+        </td>
+        <td className="px-6 py-4 max-[1000px]:px-2 max-[1000px]:text-xs ">
           <Button
             variant="link"
             onClick={() => {

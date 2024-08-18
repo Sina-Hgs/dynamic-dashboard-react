@@ -13,15 +13,21 @@ const UserInfo = ({ email, phone, website }: UserInfoProps) => {
     <>
       <span className="flex gap-2 px-3">
         <img src={mail} alt="mail-sign" width={20} height={20} />
-        <h3 className="text-lightSecondary text-sm">{email}</h3>
+        <h3 className="text-lightSecondary text-sm max-[1000px]:text-xs">
+          {email}
+        </h3>
       </span>
       <span className="flex gap-2 px-3">
         <img src={phoneSign} alt="phone-sign" width={20} height={20} />
-        <h3 className="text-lightSecondary text-sm">{phone}</h3>
+        <h3 className="text-lightSecondary text-sm max-[1000px]:text-xs">
+          {phone}
+        </h3>
       </span>
       <span className="flex gap-2 px-3">
         <img src={globe} alt="globe-sign" width={20} height={20} />
-        <h3 className="text-lightSecondary text-sm">{website}</h3>
+        <h3 className="text-lightSecondary text-sm max-[1000px]:text-xs">
+          {website}
+        </h3>
       </span>
     </>
   );

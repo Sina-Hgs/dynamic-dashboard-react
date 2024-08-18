@@ -8,7 +8,7 @@ interface SearchProps {
 const Search = ({ inputValue, setInputValue, isLoading }: SearchProps) => {
   return (
     <div className="flex items-center justify-center w-full font-RobotoMono text-lg mb-8">
-      <div className="relative w-[60%] max-[450px]:w-full">
+      <div className="relative w-[60%] max-[1000px]:w-full ">
         <img
           src={SearchIcon}
           className="absolute right-3 w-4 top-1/2 transform -translate-y-1/2 "
