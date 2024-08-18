@@ -1,5 +1,5 @@
 interface ButtonProps {
-  variant: "primary" | "link" | "search" | "pagination";
+  variant: "primary" | "link" | "pagination";
   onClick?: () => void;
   children?: string | React.ReactNode;
   type?: "submit" | "reset" | "button" | undefined;
@@ -21,8 +21,6 @@ const Button = ({
     pagination:
       "py-1 px-1 rounded-lg w-fit text-center bg-action text-md text-lightPrimary hover:opacity-90 disabled:bg-darkPrimary transition-all shadow-sm",
     link: "underline text-action hover:opacity-90 font-semibold",
-    search:
-      "py-2 px-2 border border-action rounded-r-xl w-fit text-center text-action font-bold bg-darkSecondary text-xs hover:opacity-90 disabled:opacity-70 transition-all",
   };
 
   return (

@@ -18,7 +18,7 @@ const HomePage = () => {
 
   return (
     <div className="font-RobotoCondensed">
-      {data && <HomeContainer userData={data} />}
+      {data && <HomeContainer userData={data} isLoading={isPending} />}
     </div>
   );
 };
