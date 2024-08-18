@@ -22,7 +22,7 @@ const Button = ({
       "py-1 px-1 rounded-lg w-fit text-center bg-action text-md text-lightPrimary hover:opacity-90 disabled:bg-darkPrimary transition-all shadow-sm",
     link: "underline text-action hover:opacity-90 font-semibold",
     search:
-      "py-2 pr-2 pl-3 rounded-l-lg w-fit  text-center bg-active text-md text-lightPrimary hover:opacity-90 disabled:opacity-70 transition-all",
+      "py-2 px-2 border border-action rounded-r-xl w-fit text-center text-action font-bold bg-darkSecondary text-xs hover:opacity-90 disabled:opacity-70 transition-all",
   };
 
   return (
