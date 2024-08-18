@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #1c1c1c;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("./assets/fonts/RobotoCondensed-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: RobotoMono;
+  src: url("./assets/fonts/RobotoMono-Regular.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
