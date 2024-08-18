@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import HomeContainer from "./components/HomeContainer";
 import { getUsers } from "../../api/services/getUsers";
 import Loading from "../../components/Loading";
+import { UserType } from "../../types/userType";
 
 const HomePage = () => {
   const { data, isPending } = useQuery({

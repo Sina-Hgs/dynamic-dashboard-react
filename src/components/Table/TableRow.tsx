@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../ui/Button";
-import UserCard from "../../pages/Home/components/UserCard";
+import UserCard from "../UserCard/UserCard";
+import { UserType } from "../../types/userType";
 
 interface TableRowProps {
   userData: UserType;
