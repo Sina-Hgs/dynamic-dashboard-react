@@ -21,7 +21,7 @@ const Table = ({ userData }: TableProps) => {
         <TableHead />
         <tbody className="bg-darkBlack bg-opacity-80 font-RobotoMono">
           {currentItems.map((user, index) => (
-            <TableRow key={index} useData={user} />
+            <TableRow key={index} userData={user} />
           ))}
         </tbody>
       </table>
