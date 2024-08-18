@@ -9,10 +9,19 @@ interface Address {
   };
 }
 
+interface Company {
+  name: string;
+  catchPhrase: string;
+  bs: string;
+}
+
 interface UserType {
   id: number;
   name: string;
   username: string;
   email: string;
   address: Address;
+  phone: number;
+  website: string;
+  company: Company;
 }
