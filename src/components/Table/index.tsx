@@ -10,16 +10,10 @@ const Table = () => {
               Name
             </th>
             <th scope="col" className="px-6">
-              <div className="flex items-center">
-                Email
-                <a href="#">{/* sort buttons */}</a>
-              </div>
+              <div className="flex items-center">Email</div>
             </th>
             <th scope="col" className="px-6">
-              <div className="flex items-center">
-                Location
-                <a href="#">{/* sort buttons */}</a>
-              </div>
+              <div className="flex items-center">Location</div>
             </th>
 
             <th scope="col" className="px-6">
