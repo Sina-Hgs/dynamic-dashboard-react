@@ -1,14 +1,17 @@
-import React from "react";
 import Button from "../ui/Button";
 
-const TableRow = () => {
+interface TableRowProps {
+  useData: UserType;
+}
+
+const TableRow = ({ useData }: TableRowProps) => {
   return (
     <tr className="hover:bg-lightPrimary hover:bg-opacity-90 transition-all hover:text-darkPrimary">
       <th scope="row" className="px-6 py-4 ">
-        Sina Haghshenas
+        {useData.name}
       </th>
-      <td className="px-6 py-4">example@gmail.com</td>
-      <td className="px-6 py-4">New York</td>
+      <td className="px-6 py-4">{useData.email}</td>
+      <td className="px-6 py-4">{useData.address.city}</td>
       <td className="px-6 py-4 ">
         <Button variant="link">View</Button>
       </td>
